@@ -15,11 +15,13 @@
 #import "FLEXLiveObjectsTableViewController.h"
 #import "FLEXFileBrowserTableViewController.h"
 #import "FLEXGlobalsTableViewControllerEntry.h"
+#import "FLEXConsoleLogTableViewController.h"
 #import "FLEXManager+Private.h"
 
 static __weak UIWindow *s_applicationWindow = nil;
 
 typedef NS_ENUM(NSUInteger, FLEXGlobalsRow) {
+    FLEXGlobalsRowConsoleLog,
     FLEXGlobalsRowLiveObjects,
     FLEXGlobalsRowFileBrowser,
     FLEXGlobalsRowSystemLibraries,
@@ -166,6 +168,17 @@ typedef NS_ENUM(NSUInteger, FLEXGlobalsRow) {
                     return [[FLEXFileBrowserTableViewController alloc] init];
                 };
                 break;
+
+            case FLEXGlobalsRowConsoleLog:
+              titleFuture = ^NSString *{
+                
+                return @"💻  Console Log";
+              };
+              viewControllerFuture = ^UIViewController *{
+                return [[FLEXConsoleLogTableViewController alloc] init];
+              };
+              break;
+            
             case FLEXGlobalsRowCount:
                 break;
         }
