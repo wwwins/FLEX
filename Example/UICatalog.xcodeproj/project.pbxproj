@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0149BFE2198FAFC700B90A1B /* FLEXFileBrowserSearchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFE1198FAFC700B90A1B /* FLEXFileBrowserSearchOperation.m */; };
 		01985ABC1984DE9500A65332 /* FLEXArgumentInputFontsPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01985ABB1984DE9500A65332 /* FLEXArgumentInputFontsPickerView.m */; };
+		02D6481A53EE4361A4ECEB64 /* libPods-UICatalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 735BBFF3DE0C4BA29B569267 /* libPods-UICatalog.a */; };
 		3EC6487318FF8A5000024205 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EC6487218FF8A5000024205 /* ReadMe.txt */; };
 		5356823E18F3656900BAAD62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823D18F3656900BAAD62 /* Foundation.framework */; };
 		5356824018F3656900BAAD62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823F18F3656900BAAD62 /* CoreGraphics.framework */; };
@@ -92,6 +93,8 @@
 		944F74B6197B458C009AB039 /* FLEXHierarchyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F7486197B458C009AB039 /* FLEXHierarchyTableViewController.m */; };
 		944F74B7197B458C009AB039 /* FLEXImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F7488197B458C009AB039 /* FLEXImagePreviewViewController.m */; };
 		D0154BB11A2328D80016A31E /* FLEXConsoleLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0154BB01A2328D80016A31E /* FLEXConsoleLogTableViewController.m */; };
+		D0154BB61A2334FF0016A31E /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0154BB51A2334FF0016A31E /* LogManager.m */; };
+		D0154BB91A2345AB0016A31E /* LogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0154BB81A2345AB0016A31E /* LogMessage.m */; };
 		D03647D919847248007D2A1B /* FLEXGlobalsTableViewControllerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = D03647D819847248007D2A1B /* FLEXGlobalsTableViewControllerEntry.m */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,7 @@
 		01985ABA1984DE9500A65332 /* FLEXArgumentInputFontsPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXArgumentInputFontsPickerView.h; sourceTree = "<group>"; };
 		01985ABB1984DE9500A65332 /* FLEXArgumentInputFontsPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXArgumentInputFontsPickerView.m; sourceTree = "<group>"; };
 		3EC6487218FF8A5000024205 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
+		4A7D292631FE4832A001548F /* Pods-UICatalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalog.xcconfig"; path = "Pods/Pods-UICatalog.xcconfig"; sourceTree = "<group>"; };
 		5356823A18F3656900BAAD62 /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5356823D18F3656900BAAD62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5356823F18F3656900BAAD62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +166,7 @@
 		535682A518F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AAPLApplicationSpecific.h"; sourceTree = "<group>"; };
 		535682A618F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AAPLApplicationSpecific.m"; sourceTree = "<group>"; };
 		53874F9818F36B1800510922 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		735BBFF3DE0C4BA29B569267 /* libPods-UICatalog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UICatalog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		943203FC1978F42F00E24DB3 /* AAPLCatalogTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCatalogTableTableViewController.h; sourceTree = "<group>"; };
 		943203FD1978F42F00E24DB3 /* AAPLCatalogTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCatalogTableTableViewController.m; sourceTree = "<group>"; };
 		944F7425197B458C009AB039 /* FLEXArrayExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXArrayExplorerViewController.h; sourceTree = "<group>"; };
@@ -260,6 +265,10 @@
 		944F7488197B458C009AB039 /* FLEXImagePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXImagePreviewViewController.m; sourceTree = "<group>"; };
 		D0154BAF1A2328D80016A31E /* FLEXConsoleLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXConsoleLogTableViewController.h; sourceTree = "<group>"; };
 		D0154BB01A2328D80016A31E /* FLEXConsoleLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXConsoleLogTableViewController.m; sourceTree = "<group>"; };
+		D0154BB41A2334FF0016A31E /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogManager.h; path = UICatalog/LogManager.h; sourceTree = "<group>"; };
+		D0154BB51A2334FF0016A31E /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogManager.m; path = UICatalog/LogManager.m; sourceTree = "<group>"; };
+		D0154BB71A2345AB0016A31E /* LogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogMessage.h; path = UICatalog/LogMessage.h; sourceTree = "<group>"; };
+		D0154BB81A2345AB0016A31E /* LogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogMessage.m; path = UICatalog/LogMessage.m; sourceTree = "<group>"; };
 		D03647D51984720F007D2A1B /* FLEXManager+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FLEXManager+Private.h"; sourceTree = "<group>"; };
 		D03647D719847248007D2A1B /* FLEXGlobalsTableViewControllerEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXGlobalsTableViewControllerEntry.h; sourceTree = "<group>"; };
 		D03647D819847248007D2A1B /* FLEXGlobalsTableViewControllerEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXGlobalsTableViewControllerEntry.m; sourceTree = "<group>"; };
@@ -273,6 +282,7 @@
 				5356824018F3656900BAAD62 /* CoreGraphics.framework in Frameworks */,
 				5356824218F3656900BAAD62 /* UIKit.framework in Frameworks */,
 				5356823E18F3656900BAAD62 /* Foundation.framework in Frameworks */,
+				02D6481A53EE4361A4ECEB64 /* libPods-UICatalog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,7 @@
 				943203FF1978F4B700E24DB3 /* 3rd Party */,
 				5356823C18F3656900BAAD62 /* Frameworks */,
 				5356823B18F3656900BAAD62 /* Products */,
+				4A7D292631FE4832A001548F /* Pods-UICatalog.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,6 +315,7 @@
 				5356823D18F3656900BAAD62 /* Foundation.framework */,
 				5356823F18F3656900BAAD62 /* CoreGraphics.framework */,
 				5356824118F3656900BAAD62 /* UIKit.framework */,
+				735BBFF3DE0C4BA29B569267 /* libPods-UICatalog.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -408,6 +420,7 @@
 		943203FF1978F4B700E24DB3 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
+				D0154BB31A2334870016A31E /* LogManager */,
 				943204001978F4C100E24DB3 /* FLEX */,
 			);
 			name = "3rd Party";
@@ -593,6 +606,17 @@
 			name = "FLEX Integration";
 			sourceTree = "<group>";
 		};
+		D0154BB31A2334870016A31E /* LogManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0154BB41A2334FF0016A31E /* LogManager.h */,
+				D0154BB51A2334FF0016A31E /* LogManager.m */,
+				D0154BB71A2345AB0016A31E /* LogMessage.h */,
+				D0154BB81A2345AB0016A31E /* LogMessage.m */,
+			);
+			name = LogManager;
+			sourceTree = "<group>";
+		};
 		D03647D619847235007D2A1B /* Private */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,9 +633,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5356826F18F3656900BAAD62 /* Build configuration list for PBXNativeTarget "UICatalog" */;
 			buildPhases = (
+				03EBF705B57B41F2BD86C63F /* Check Pods Manifest.lock */,
 				5356823618F3656900BAAD62 /* Sources */,
 				5356823718F3656900BAAD62 /* Frameworks */,
 				5356823818F3656900BAAD62 /* Resources */,
+				B63686C6531A45E3BAE149BF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -664,6 +690,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03EBF705B57B41F2BD86C63F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B63686C6531A45E3BAE149BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-UICatalog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5356823618F3656900BAAD62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -699,6 +758,7 @@
 				944F74B6197B458C009AB039 /* FLEXHierarchyTableViewController.m in Sources */,
 				535682BC18F3670300BAAD62 /* AAPLTextViewController.m in Sources */,
 				944F74B4197B458C009AB039 /* FLEXWebViewController.m in Sources */,
+				D0154BB91A2345AB0016A31E /* LogMessage.m in Sources */,
 				944F74A5197B458C009AB039 /* FLEXFieldEditorViewController.m in Sources */,
 				944F7489197B458C009AB039 /* FLEXArrayExplorerViewController.m in Sources */,
 				535682B418F3670300BAAD62 /* AAPLPickerViewController.m in Sources */,
@@ -721,6 +781,7 @@
 				944F74A0197B458C009AB039 /* FLEXArgumentInputTextView.m in Sources */,
 				944F749C197B458C009AB039 /* FLEXArgumentInputNumberView.m in Sources */,
 				944F749A197B458C009AB039 /* FLEXArgumentInputJSONObjectView.m in Sources */,
+				D0154BB61A2334FF0016A31E /* LogManager.m in Sources */,
 				944F7494197B458C009AB039 /* FLEXHeapEnumerator.m in Sources */,
 				535682B918F3670300BAAD62 /* AAPLStepperViewController.m in Sources */,
 				535682AA18F3670300BAAD62 /* AAPLAppDelegate.m in Sources */,
@@ -854,6 +915,7 @@
 		};
 		5356827018F3656900BAAD62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A7D292631FE4832A001548F /* Pods-UICatalog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -868,6 +930,7 @@
 		};
 		5356827118F3656900BAAD62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A7D292631FE4832A001548F /* Pods-UICatalog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

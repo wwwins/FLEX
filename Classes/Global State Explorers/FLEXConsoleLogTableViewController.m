@@ -8,11 +8,12 @@
 
 #import "FLEXConsoleLogTableViewController.h"
 #import "FLEXUtility.h"
+#import "LogManager.h"
 
 @interface FLEXConsoleLogTableViewController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) NSDateFormatter *formatter;
-@property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong) RLMResults *messages;
 @property (nonatomic, strong) UISearchBar *searchBar;
 
 @end
@@ -24,7 +25,9 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-      _messages = [NSMutableArray new];
+        _formatter = [[NSDateFormatter alloc] init];
+        _formatter.dateFormat = @"yyyy-MM-dd HH:mm";
+        _messages = [[LogMessage allObjects] sortedResultsUsingProperty:@"date" ascending:YES];
     }
     return self;
 }
@@ -64,13 +67,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [_messages count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_messages count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,8 +86,8 @@
     cell.textLabel.font = [FLEXUtility defaultTableViewCellLabelFont];
   }
   
-  NSString *buf = _messages[indexPath.row];
-  cell.textLabel.text = buf;
+  LogMessage *msg = _messages[indexPath.row];
+  cell.textLabel.text = [NSString stringWithFormat:@"[%@]:%@",[_formatter stringFromDate:msg.date], [msg message]];
   
   return cell;
 }

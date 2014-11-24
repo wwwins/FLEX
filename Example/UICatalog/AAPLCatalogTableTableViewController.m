@@ -9,9 +9,12 @@
 #if DEBUG
 // FLEX should only be compiled and used in debug builds.
 #import "FLEXManager.h"
+#import "LogManager.h"
 #endif
 
 @interface AAPLCatalogTableTableViewController ()
+
+@property LogManager *logManager;
 
 @end
 
@@ -23,6 +26,7 @@
     
 #if DEBUG
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"FLEX" style:UIBarButtonItemStylePlain target:self action:@selector(flexButtonTapped:)];
+    _logManager = [LogManager sharedManager];
 #endif
 }
 
@@ -31,6 +35,9 @@
 #if DEBUG
     // This call shows the FLEX toolbar if it's not already shown.
     [[FLEXManager sharedManager] showExplorer];
+  
+    [_logManager log:@"Start LogManager..."];
+
 #endif
 }
 
