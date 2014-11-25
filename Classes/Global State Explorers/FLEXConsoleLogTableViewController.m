@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 f. All rights reserved.
 //
 
+#import "FLEXWebViewController.h"
 #import "FLEXConsoleLogTableViewController.h"
 #import "FLEXUtility.h"
 #import "LogManager.h"
@@ -28,6 +29,7 @@
         _formatter = [[NSDateFormatter alloc] init];
         _formatter.dateFormat = @"yyyy-MM-dd HH:mm";
         _messages = [[LogMessage allObjects] sortedResultsUsingProperty:@"date" ascending:YES];
+        //_messages = [LogMessage allObjectsInRealm:[LogManager sharedManager].realm];
     }
     return self;
 }
@@ -67,13 +69,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [_messages count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [_messages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,9 +87,9 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [FLEXUtility defaultTableViewCellLabelFont];
   }
-  
-  LogMessage *msg = _messages[indexPath.row];
-  cell.textLabel.text = [NSString stringWithFormat:@"[%@]:%@",[_formatter stringFromDate:msg.date], [msg message]];
+  LogMessage *msg = [_messages objectAtIndex:indexPath.row];
+  NSString *buf = [NSString stringWithFormat:@"[%@]:%@",[_formatter stringFromDate:msg.date], [msg message]];
+  cell.textLabel.text = buf;
   
   return cell;
 }
@@ -96,9 +98,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//  FLEXClassesTableViewController *classesViewController = [[FLEXClassesTableViewController alloc] init];
-//  classesViewController.binaryImageName = self.filteredImageNames[indexPath.row];
-//  [self.navigationController pushViewController:classesViewController animated:YES];
+  LogMessage *msg = _messages[indexPath.row];
+  UIViewController *vc = [[FLEXWebViewController alloc] initWithText:[NSString stringWithFormat:@"[%@]:%@",[_formatter stringFromDate:msg.date], [msg message]]];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
