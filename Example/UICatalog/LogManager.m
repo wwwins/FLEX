@@ -27,13 +27,14 @@
 {
   if (self = [super init])
   {
-    _memoryIdentifier = @"MemoryIdentifier";
+    //_memoryIdentifier = @"memory.identifier";
     if (_memoryIdentifier) {
       [self useMemoryRealm];
     }
     else {
       // Ensure we start with an empty database
       [[NSFileManager defaultManager] removeItemAtPath:[RLMRealm defaultRealmPath] error:nil];
+      
       [self useDefaultRealm];
     }
   }
